@@ -48,5 +48,6 @@ $colors: #232D36,#4A535C,#7C7F83,#5C534A,#362D23,#2D2336;
 @for $i from 1 through length($colors) {
 	li:nth-child(#{length($colors)}n+#{$i}) {
 		background: lighten(nth($colors, $i), 20%);
+        color: #fff;
 	}
 }

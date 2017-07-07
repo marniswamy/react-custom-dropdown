@@ -11,23 +11,25 @@ const weatherReport = [
 ];
 
 const customerDetails = [
-  { "first": 'Marni',  "last": "Swamy" },
-  { "first": 'Ayyappa', "last": "Marni" }
+  { "first": 'Marni',  "last": "Peters" },
+  { "first": 'Nicole', "last": "Venka" }
 ]; 
 
 /*
   To render Dropdown components in App.
 */
-const App = () => (  
+const App = () => (
+ <div className="container">    
   <div className="row">
-    <div className="weatherItem col-sm-6 text-center">
+    <div className="weatherItem col-xs-12 col-sm-12 col-md-6 text-center">
       <h2>Weather Report</h2>
       <Dropdown placeholder="Choose City" itemComponent={WeatherItem} items={weatherReport}/>
     </div>
-    <div  className="customerItem col-sm-6 text-center">
+    <div  className="customerItem col-xs-12 col-sm-12 col-md-6 text-center">
       <h2>Customer Details</h2>
       <Dropdown placeholder="Choose Customers" itemComponent={CustomerItem} items={customerDetails} />
     </div>
+   </div>
   </div>  
 );
 
