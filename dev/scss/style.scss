@@ -1,0 +1,52 @@
+$primary: #006699;
+$default: #338AFF;
+
+h2 {
+	color: $primary;
+}
+
+.customDropDown ul,
+.customDropDown .btn {
+	width: 250px;
+	text-align: left;
+	padding:0px;
+}
+.customDropDown
+{
+	width:250px;
+	margin:20px auto;
+	.btn{
+	padding:10px;
+	}
+}
+.customDropDown ul {
+	border: 1px solid lightgrey;
+	position:absolute;
+	left:0;
+	top:45px;
+	li{
+	 padding:8px;
+	}
+}
+.listItems{
+	list-style:none;
+	cursor:pointer;
+}
+.showList {
+	display:inline-block;
+}
+.hideList {
+	display:none;
+}
+.btn-lg .caret
+{
+	margin-top:10px;
+}
+
+$colors: #232D36,#4A535C,#7C7F83,#5C534A,#362D23,#2D2336;
+
+@for $i from 1 through length($colors) {
+	li:nth-child(#{length($colors)}n+#{$i}) {
+		background: lighten(nth($colors, $i), 20%);
+	}
+}
